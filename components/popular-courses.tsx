@@ -4,45 +4,38 @@ import Image from "next/image"
 const courses = [
   {
     id: 1,
-    slug: "online-advertising",
-    title: "Online Advertising",
-    image: "/images/online-advertising.png",
+    slug: "digital-marketing",
+    title: "Digital Marketing",
+    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800",
+    price: "$99",
   },
   {
     id: 2,
-    slug: "social-media-management",
-    title: "Social Media Management",
-    image: "/images/social-media.png",
+    slug: "online-importation",
+    title: "Online Importation",
+    image: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800",
+    price: "$129",
   },
   {
     id: 3,
-    slug: "wig-making-and-hair-styling",
-    title: "Wig Making and Hair Styling",
-    image: "/images/wig-making.png",
+    slug: "video-editing",
+    title: "Video Editing",
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800",
+    price: "$149",
   },
   {
     id: 4,
-    slug: "copywriting",
-    title: "Copywriting",
-    image: "/images/copywriting.png",
+    slug: "graphic-design",
+    title: "Graphic Design",
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800",
+    price: "$119",
   },
   {
     id: 5,
-    slug: "graphic-design",
-    title: "Graphic Design",
-    image: "/images/graphic-design.png",
-  },
-  {
-    id: 6,
-    slug: "community-management",
-    title: "Community Management",
-    image: "/images/community-management.png",
-  },
-  {
-    id: 7,
-    slug: "graphic-design-canva",
-    title: "Graphic Design - Canva",
-    image: "/images/canva.png",
+    slug: "scented-candles",
+    title: "Scented Candles Making",
+    image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800",
+    price: "$79",
   },
 ]
 
@@ -64,21 +57,20 @@ export default function PopularCourses() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.slice(0, 6).map((course) => (
-            <div key={course.id} className="border rounded-md overflow-hidden bg-white">
-              <div className="relative h-48 w-full">
-                <Image src={course.image || "/placeholder.svg"} alt={course.title} fill className="object-contain" />
+          {courses.map((course) => (
+            <Link key={course.id} href={`/courses/${course.slug}`} className="block">
+              <div className="border rounded-md overflow-hidden bg-white shadow-md">
+                <div className="relative h-64 w-full">
+                  <Image src={course.image} alt={course.title} fill className="object-cover" />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="text-lg font-medium text-gray-800 mb-2">{course.title}</h3>
+                  <div className="block w-full bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-full transition-colors">
+                    Enroll Now
+                  </div>
+                </div>
               </div>
-              <div className="p-4">
-                <h3 className="text-lg font-medium text-gray-800 mb-4">{course.title}</h3>
-                <Link
-                  href={`/courses/${course.slug}`}
-                  className="block w-full bg-[#00a0e4] hover:bg-[#0090d0] text-white text-center py-3 rounded-md transition-colors"
-                >
-                  Enroll Now
-                </Link>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
 

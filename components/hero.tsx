@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { Menu, X } from "react-feather"
 
 export default function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,7 +12,13 @@ export default function Hero() {
     <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image src="/images/hero.png" alt="Hero Background" fill priority className="object-cover" />
+        <Image 
+          src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+          alt="Hero Background" 
+          fill 
+          priority 
+          className="object-cover" 
+        />
         <div className="absolute inset-0 bg-blue-900/60"></div>
       </div>
 

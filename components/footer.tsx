@@ -4,12 +4,12 @@ import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-200 pt-16 pb-8">
+    <footer className="bg-gray-200 pt-16 pb-8 text-center">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          <div>
+          <div className="flex flex-col items-center">
             <div className="relative w-40 h-16 mb-6">
-              <Image src="/images/logo.png" alt="Live Your Dreams Africa" fill className="object-contain" />
+              <Image src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=800" alt="Live Your Dreams Africa" fill className="object-contain" />
             </div>
             <p className="text-gray-700 mb-6">
               Our aim is to inspire and empower individuals to actualize their dreams through the development of
@@ -31,22 +31,17 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-bold mb-6">Popular Courses</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/courses/graphic-design-canva" className="text-orange-500 hover:underline">
-                  Graphic Design - Canva
+                <Link href="/courses/digital-marketing" className="text-orange-500 hover:underline">
+                  Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link href="/courses/community-management" className="text-orange-500 hover:underline">
-                  Community Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses/social-media-management" className="text-orange-500 hover:underline">
-                  Social Media Management
+                <Link href="/courses/online-importation" className="text-orange-500 hover:underline">
+                  Online Importation
                 </Link>
               </li>
               <li>
@@ -55,29 +50,19 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/courses/copywriting" className="text-orange-500 hover:underline">
-                  Copywriting
+                <Link href="/courses/scented-candles" className="text-orange-500 hover:underline">
+                  Scented candles
                 </Link>
               </li>
               <li>
-                <Link href="/courses/wig-making-and-hair-styling" className="text-orange-500 hover:underline">
-                  Wig Making and Hair Styling
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses/social-media-management" className="text-orange-500 hover:underline">
-                  Social Media Management
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses/online-advertising" className="text-orange-500 hover:underline">
-                  Online Advertising
+                <Link href="/courses/video-editing" className="text-orange-500 hover:underline">
+                  Video Editing
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-bold mb-6">Contact Info</h3>
             <ul className="space-y-3 text-gray-700">
               <li>
